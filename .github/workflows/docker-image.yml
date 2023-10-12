@@ -21,4 +21,4 @@ jobs:
       uses: docker/build-push-action@v5
       with:
           push: true
-          tags: eyalpaz/location-service-backend:tagname
+          tags: eyalpaz/location-service-backend:$(date +%s)
