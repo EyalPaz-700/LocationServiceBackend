@@ -79,4 +79,4 @@ async def login_for_access_token(form_data: create_access_token_route = Depends(
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=80)
