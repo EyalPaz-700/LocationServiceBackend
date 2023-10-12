@@ -22,3 +22,8 @@ jobs:
       with:
           push: true
           tags: eyalpaz/location-service-backend:latest
+          build-args: |
+            SECRET_EN_KEY=${{ secrets.SECRET_EN_KEY }}
+            DATABASE_URL=${{ secrets.DATABASE_URL }}
+            SECRET_PASSWORD_KEY=${{ secrets.SECRET_PASSWORD_KEY }}
+            ALGORITHM=${{ secrets.ALGORITHM }}
