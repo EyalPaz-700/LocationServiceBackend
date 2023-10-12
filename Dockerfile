@@ -1,7 +1,10 @@
 FROM python:3.9
 WORKDIR /app
 COPY . /app
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
+RUN | \
+    python -m venv venv \
+    source venv/bin/activate \
+    pip install  -r requirements.txt
 EXPOSE 80
 ARG SECRET_API_KEY
 ARG DATABASE_URL
